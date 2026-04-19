@@ -1,13 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.restauranteelbuensabor;
 
-/**
- *
- * @author Roberto Buelvas
- */
 public class Mesa {
-    
+
+    private int numero;
+    private boolean activa;
+
+    public Mesa() {
+        this.numero = 0;
+        this.activa = false;
+    }
+
+    public void activar(int numero) {
+        this.numero = numero;
+        this.activa = true;
+    }
+
+    public void desactivar() {
+        this.numero = 0;
+        this.activa = false;
+    }
+
+    public boolean estaActiva() {
+        return activa;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
 }
