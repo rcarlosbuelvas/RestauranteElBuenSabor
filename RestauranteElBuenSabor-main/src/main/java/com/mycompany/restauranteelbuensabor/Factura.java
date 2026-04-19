@@ -37,16 +37,17 @@ public class Factura {
     }
 
     public double calcularPropina() {
-        // La propina aplica solo si el subtotal con descuento supera el umbral
-        if (calcularSubtotalConDescuento() > UMBRAL_PROPINA) {
-            return calcularSubtotalConDescuento() * TASA_PROPINA;
-        }
-        return 0;
+    // La propina aplica sobre el total con IVA incluido, según política del restaurante
+    double baseConIva = calcularSubtotalConDescuento() + calcularIVA();
+    if (calcularSubtotalConDescuento() > UMBRAL_PROPINA) {
+        return baseConIva * TASA_PROPINA;
     }
+    return 0;
+}
 
-    public double calcularTotal() {
-        return calcularSubtotalConDescuento() + calcularIVA() + calcularPropina();
-    }
+public double calcularTotal() {
+    return calcularSubtotalConDescuento() + calcularIVA() + calcularPropina();
+}
 
     public int getNumero() {
         return numero;

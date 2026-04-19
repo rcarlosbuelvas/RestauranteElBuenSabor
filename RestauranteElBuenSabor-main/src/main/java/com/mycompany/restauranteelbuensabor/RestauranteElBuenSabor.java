@@ -6,7 +6,7 @@ public class RestauranteElBuenSabor {
 
     private static final String SEPARADOR      = "========================================";
     private static final String NOMBRE         = "    RESTAURANTE EL BUEN SABOR";
-    private static final String DIRECCION      = "    Calle 151 #8-32, Valledupar";
+    private static final String DIRECCION      = "    Calle 151 #8-32, Valledupar - cesar";
     private static final String NIT            = "    NIT: 900.123.456-7";
 
     private static Pedido pedido               = new Pedido();
